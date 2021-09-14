@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/gififyFragment">
+
+    <fragment
+        android:id="@+id/gififyFragment"
+        android:name="ar.com.gififyapp.ui.gifify.GififyFragment"
+        android:label="Gifify App"
+        tools:layout="@layout/fragment_gifify" >
+        <action
+            android:id="@+id/action_gififyFragment_to_gififyDetailFragment"
+            app:destination="@id/gififyDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_gififyFragment_to_gififyFavoriteFragment"
+            app:destination="@id/gififyFavoriteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gififyDetailFragment"
+        android:name="ar.com.gififyapp.ui.gififydetails.GififyDetailFragment"
+        android:label="Gifify Details"
+        tools:layout="@layout/fragment_gifify_detail" >
+        <argument
+            android:name="type"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="images"
+            app:argType="ar.com.gififyapp.data.model.ImageGifify" />
+        <argument
+            android:name="original"
+            app:argType="ar.com.gififyapp.data.model.Original" />
+        <argument
+            android:name="user"
+            app:argType="ar.com.gififyapp.data.model.User"
+            app:nullable="true" />
+        <argument
+            android:name="source"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gififyFavoriteFragment"
+        android:name="ar.com.gififyapp.ui.gififyfavorite.GififyFavoriteFragment"
+        android:label="Gifify Favorites"
+        tools:layout="@layout/fragment_gifify_favorite">
+        <action
+            android:id="@+id/action_gififyFavoriteFragment_to_gififyDetailFragment"
+            app:destination="@id/gififyDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>

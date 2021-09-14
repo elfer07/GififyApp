@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gififydetails.GififyDetailFragment">
+
+    <TextView
+        android:id="@+id/tv_title_gifify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="title"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data_profile"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_gifify">
+
+        <ImageView
+            android:id="@+id/iv_user_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_user_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/iv_user_profile"
+            app:layout_constraintStart_toStartOf="@+id/iv_user_profile"
+            app:layout_constraintTop_toBottomOf="@+id/iv_user_profile"
+            tools:text="User Name" />
+
+        <TextView
+            android:id="@+id/tv_user_profile_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tv_user_profile_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_user_profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_profile_name"
+            tools:text="Account" />
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Follow on:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_profile_account" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_follow">
+
+            <ImageView
+                android:id="@+id/btn_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_instagram" />
+
+            <ImageView
+                android:id="@+id/btn_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:id="@+id/btn_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_twitter" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_source"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+        <TextView
+            android:id="@+id/tv_source_gifify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/source"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_source"
+            app:layout_constraintStart_toEndOf="@+id/iv_source"
+            app:layout_constraintTop_toTopOf="@+id/iv_source" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_gifify_main"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/data_profile"
+        app:layout_constraintTop_toTopOf="@+id/data_profile" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gifify_main">
+
+        <TextView
+            android:id="@+id/tv_description_gifify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            tools:text="@string/description" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_favorite_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
