@@ -54,7 +54,6 @@ class GififyFavoriteFragment : Fragment(R.layout.fragment_gifify_favorite), Gifi
                 }
             }
         })
-
     }
 
     override fun onGififyFavoriteClick(gififyFavorite: GififyFavorite) {
@@ -70,6 +69,5 @@ class GififyFavoriteFragment : Fragment(R.layout.fragment_gifify_favorite), Gifi
             gififyFavorite.id
         )
         findNavController().navigate(action)
-
     }
 }

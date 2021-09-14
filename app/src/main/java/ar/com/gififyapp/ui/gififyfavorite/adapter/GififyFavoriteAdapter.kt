@@ -48,7 +48,6 @@ class GififyFavoriteAdapter(
         override fun bind(item: GififyFavorite) {
             Glide.with(context).load(item.images.original.url).centerCrop().into(binding.ivGifify)
             binding.tvTitle.text = item.title
-            //binding.tvDescription.text = item.user.description
         }
 
     }

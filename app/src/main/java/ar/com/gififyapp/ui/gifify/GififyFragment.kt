@@ -72,31 +72,6 @@ class GififyFragment : Fragment(R.layout.fragment_gifify), GififyAdapter.OnGifif
                 }
             }
         })
-
-        /*viewModel.fetchTrandingGifs().observe(viewLifecycleOwner, Observer {
-            when(it) {
-                is Result.Loading -> {
-                    Log.d("TAGG", "Loading...")
-                    binding.progressBar.visibility = View.VISIBLE
-
-                }
-                is Result.Success -> {
-                    Log.d("TAGG", "SUCCESS: ${it.data.data.size}")
-                    binding.progressBar.visibility = View.GONE
-                    binding.rvGififys.adapter = GififyAdapter(
-                        requireContext(),
-                        it.data.data, this
-                    )
-
-                }
-                is Result.Failure -> {
-                    Log.d("TAGG", "ERROR: ${it.exception}")
-                    binding.progressBar.visibility = View.GONE
-                    Toast.makeText(requireContext(), "ERROR: ${it.exception}", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            }
-        })*/
     }
 
     private fun setUpSearch() {
@@ -106,7 +81,6 @@ class GififyFragment : Fragment(R.layout.fragment_gifify), GififyAdapter.OnGifif
                 viewModel.setGif(query!!)
                 return false
             }
-
             override fun onQueryTextChange(newText: String?): Boolean {
                 return false
             }
@@ -145,5 +119,4 @@ class GififyFragment : Fragment(R.layout.fragment_gifify), GififyAdapter.OnGifif
             }
         }
     }
-
 }
