@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/gififyFragment">
+    app:startDestination="@id/gififyTrendingFragment">
 
     <fragment
         android:id="@+id/gififyFragment"
@@ -71,5 +71,17 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gififyTrendingFragment"
+        android:name="ar.com.gififyapp.ui.gififytrending.GififyTrendingFragment"
+        android:label="fragment_gifify_trending"
+        tools:layout="@layout/fragment_gifify_trending" >
+        <action
+            android:id="@+id/action_gififyTrendingFragment_to_gififyDetailFragment"
+            app:destination="@id/gififyDetailFragment" />
+        <action
+            android:id="@+id/action_gififyTrendingFragment_to_gififyFavoriteFragment"
+            app:destination="@id/gififyFavoriteFragment" />
     </fragment>
 </navigation>

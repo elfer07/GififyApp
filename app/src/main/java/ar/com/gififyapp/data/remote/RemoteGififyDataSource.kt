@@ -15,5 +15,5 @@ class RemoteGififyDataSource(private val webService: WebService) {
     suspend fun getGififys(): GififyList = webService.getGififys()
     suspend fun getGififyByName(name: String): Result<List<Gifify>> = Result.Success(RetrofitClient.webservice.getGififysByName(API_KEY, name).data)
 
-    suspend fun getTrandingGifs(): GififyList = webService.getTrandingGifs(API_KEY)
+    suspend fun getTrandingGifs(): GififyList = webService.getTrendingGifs(API_KEY)
 }

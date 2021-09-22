@@ -13,7 +13,7 @@ interface GififyRepository {
     suspend fun getGififys(): GififyList
     suspend fun getGififyList(name: String): Result<List<Gifify>>
 
-    suspend fun getTrandingGifs(): GififyList
+    suspend fun getTrendingGifs(): GififyList
 
     suspend fun getFavoritesGifify(): Result<List<GififyFavorite>>
     suspend fun saveFavoriteGifify(gififyFavorite: GififyFavorite)

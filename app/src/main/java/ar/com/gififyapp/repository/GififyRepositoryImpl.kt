@@ -20,7 +20,7 @@ class GififyRepositoryImpl(
 
     override suspend fun getGififyList(name: String): Result<List<Gifify>> = dataSourceRemote.getGififyByName(name)
 
-    override suspend fun getTrandingGifs(): GififyList = dataSourceRemote.getTrandingGifs()
+    override suspend fun getTrendingGifs(): GififyList = dataSourceRemote.getTrandingGifs()
 
     override suspend fun getFavoritesGifify(): Result<List<GififyFavorite>> = dataSourceLocal.getFavoritesGifify()
 

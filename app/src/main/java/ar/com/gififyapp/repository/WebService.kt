@@ -16,5 +16,5 @@ interface WebService {
     suspend fun getGififysByName(@Query("api_key") apiKey: String, @Query("q") name: String): GififyList
 
     @GET("gifs/trending")
-    suspend fun getTrandingGifs(@Query("api_key") apiKey: String): GififyList
+    suspend fun getTrendingGifs(@Query("api_key") apiKey: String): GififyList
 }

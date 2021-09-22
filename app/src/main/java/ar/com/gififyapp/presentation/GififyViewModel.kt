@@ -39,7 +39,7 @@ class GififyViewModel(
     fun fetchTrandingGifs() = liveData(Dispatchers.IO) {
         emit(Result.Loading())
         try {
-            emit(Result.Success(repo.getTrandingGifs()))
+            emit(Result.Success(repo.getTrendingGifs()))
         } catch (e: Exception) {
             emit(Result.Failure(e))
         }
