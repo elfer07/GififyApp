@@ -75,13 +75,28 @@
     <fragment
         android:id="@+id/gififyTrendingFragment"
         android:name="ar.com.gififyapp.ui.gififytrending.GififyTrendingFragment"
-        android:label="fragment_gifify_trending"
-        tools:layout="@layout/fragment_gifify_trending" >
+        android:label="Gifify App"
+        tools:layout="@layout/fragment_gifify_trending">
         <action
             android:id="@+id/action_gififyTrendingFragment_to_gififyDetailFragment"
-            app:destination="@id/gififyDetailFragment" />
+            app:destination="@id/gififyDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_gififyTrendingFragment_to_gififyFavoriteFragment"
-            app:destination="@id/gififyFavoriteFragment" />
+            app:destination="@id/gififyFavoriteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_gififyTrendingFragment_to_gififyFragment"
+            app:destination="@id/gififyFragment"
+            app:enterAnim="@anim/slide_in_bottom"
+            app:exitAnim="@anim/slide_out_top"
+            app:popEnterAnim="@anim/slide_in_top"
+            app:popExitAnim="@anim/slide_out_bottom" />
     </fragment>
 </navigation>

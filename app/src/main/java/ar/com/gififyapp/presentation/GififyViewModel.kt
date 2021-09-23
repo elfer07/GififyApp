@@ -22,7 +22,7 @@ class GififyViewModel(
     }
 
     init {
-        setGif("haha")
+        setGif("")
     }
 
     val fetchGififys = gififyData.distinctUntilChanged().switchMap {

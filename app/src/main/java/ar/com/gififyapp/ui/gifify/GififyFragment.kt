@@ -44,8 +44,6 @@ class GififyFragment : Fragment(R.layout.fragment_gifify), GififyAdapter.OnGifif
 
         setUpSearch()
 
-        setHasOptionsMenu(true)
-
         binding.rvGififys.layoutManager = LinearLayoutManager(requireContext())
 
         viewModel.fetchGififys.observe(viewLifecycleOwner, Observer {
@@ -101,22 +99,5 @@ class GififyFragment : Fragment(R.layout.fragment_gifify), GififyAdapter.OnGifif
             gifify.id
         )
         findNavController().navigate(action)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.main_menu, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId){
-            R.id.favorite -> {
-                findNavController().navigate(R.id.action_gififyFragment_to_gififyFavoriteFragment)
-                false
-            }
-            else -> {
-                false
-            }
-        }
     }
 }
