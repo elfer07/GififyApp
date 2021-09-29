@@ -14,4 +14,10 @@
         android:icon="@drawable/ic_baseline_favorite_24"
         app:showAsAction="ifRoom"/>
 
+    <item
+        android:id="@+id/about"
+        android:title="@string/about_app"
+        android:icon="@drawable/ic_baseline_info_24"
+        app:showAsAction="ifRoom"/>
+
 </menu>

@@ -9,7 +9,7 @@ data class Gifify(
     val url: String = "",
     val embed_url: String = "",
     val username: String = "",
-    val source: String = "",
+    val source: String? = "",
     val title: String = "",
     val images: ImageGifify,
     val user: User?

@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/drawable/line.xml" value="0.26197916666666665" />
         <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/activity_main.xml" value="0.19270833333333334" />
+        <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/empty_container.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/fragment_about_app.xml" value="0.26927083333333335" />
         <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/fragment_gifify.xml" value="0.19270833333333334" />
+        <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/fragment_gifify_detail.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/fragment_gifify_favorite.xml" value="0.24583333333333332" />
         <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/fragment_gifify_trending.xml" value="0.1859375" />
+        <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/item_gifify.xml" value="0.24583333333333332" />
         <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/layout/item_gifify_trending.xml" value="0.25" />
         <entry key="..\:/Users/elfer/Documents/ParaGitCodigos/GififyApp/app/src/main/res/menu/main_menu.xml" value="0.2609375" />
       </map>

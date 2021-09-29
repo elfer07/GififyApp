@@ -3,6 +3,7 @@ package ar.com.gififyapp.ui.gififytrending
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.GridLayout
 import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.fragment.app.viewModels
@@ -83,6 +84,10 @@ class GififyTrendingFragment : Fragment(R.layout.fragment_gifify_trending), Gifi
             }
             R.id.search -> {
                 findNavController().navigate(R.id.action_gififyTrendingFragment_to_gififyFragment)
+                true
+            }
+            R.id.about -> {
+                findNavController().navigate(R.id.action_gififyTrendingFragment_to_aboutAppFragment)
                 true
             }
             else -> {

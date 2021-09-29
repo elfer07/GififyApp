@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".ui.gififytrending.GififyTrendingFragment">
 
     <include
@@ -29,5 +30,8 @@
         android:id="@+id/rv_gififys_trending"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:foregroundGravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"/>
 </LinearLayout>

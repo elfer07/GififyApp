@@ -20,6 +20,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"
         android:text="No Favorite Gif"/>
 
 </LinearLayout>
