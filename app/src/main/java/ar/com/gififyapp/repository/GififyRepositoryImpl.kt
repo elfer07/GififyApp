@@ -6,11 +6,16 @@ import ar.com.gififyapp.data.model.Gifify
 import ar.com.gififyapp.data.model.GififyFavorite
 import ar.com.gififyapp.data.model.GififyList
 import ar.com.gififyapp.data.remote.RemoteGififyDataSource
+import dagger.hilt.android.scopes.ActivityRetainedScoped
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import javax.inject.Inject
 
 /**
  * Created by Fernando Moreno on 12/9/2021.
  */
-class GififyRepositoryImpl(
+@ExperimentalCoroutinesApi
+@ActivityRetainedScoped
+class GififyRepositoryImpl @Inject constructor(
     private val dataSourceRemote: RemoteGififyDataSource,
     private val dataSourceLocal: LocalGififyDataSource
 ): GififyRepository {

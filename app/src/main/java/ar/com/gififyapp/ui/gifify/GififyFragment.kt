@@ -2,9 +2,6 @@ package ar.com.gififyapp.ui.gifify
 
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
@@ -15,26 +12,18 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ar.com.gififyapp.R
 import ar.com.gififyapp.core.Result
-import ar.com.gififyapp.data.local.LocalDatabase
-import ar.com.gififyapp.data.local.LocalGififyDataSource
 import ar.com.gififyapp.data.model.Gifify
-import ar.com.gififyapp.data.remote.RemoteGififyDataSource
 import ar.com.gififyapp.databinding.FragmentGififyBinding
 import ar.com.gififyapp.presentation.GififyViewModel
-import ar.com.gififyapp.presentation.GififyViewModelFactory
-import ar.com.gififyapp.repository.GififyRepositoryImpl
-import ar.com.gififyapp.repository.RetrofitClient
 import ar.com.gififyapp.ui.gifify.adapter.GififyAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GififyFragment : Fragment(R.layout.fragment_gifify), GififyAdapter.OnGififyClickListener {
 
     private lateinit var binding: FragmentGififyBinding
 
-    private val viewModel by viewModels<GififyViewModel> {
-        GififyViewModelFactory(GififyRepositoryImpl(RemoteGififyDataSource(RetrofitClient.webservice),
-        LocalGififyDataSource(LocalDatabase.getDatabase(requireContext()).gififyDao())
-        ))
-    }
+    private val viewModel by viewModels<GififyViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

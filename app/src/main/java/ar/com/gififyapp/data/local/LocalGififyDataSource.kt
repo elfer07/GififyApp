@@ -2,11 +2,14 @@ package ar.com.gififyapp.data.local
 
 import ar.com.gififyapp.core.Result
 import ar.com.gififyapp.data.model.GififyFavorite
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import javax.inject.Inject
 
 /**
  * Created by Fernando Moreno on 13/9/2021.
  */
-class LocalGififyDataSource(private val gififyDao: GififyDao) {
+@ExperimentalCoroutinesApi
+class LocalGififyDataSource @Inject constructor(private val gififyDao: GififyDao) {
 
     suspend fun saveFavorite(gifify: GififyFavorite){
         gififyDao.saveFavoriteGifify(gifify)

@@ -10,29 +10,18 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ar.com.gififyapp.R
 import ar.com.gififyapp.core.Result
-import ar.com.gififyapp.data.local.LocalDatabase
-import ar.com.gififyapp.data.local.LocalGififyDataSource
 import ar.com.gififyapp.data.model.GififyFavorite
-import ar.com.gififyapp.data.remote.RemoteGififyDataSource
 import ar.com.gififyapp.databinding.FragmentGififyFavoriteBinding
 import ar.com.gififyapp.presentation.GififyViewModel
-import ar.com.gififyapp.presentation.GififyViewModelFactory
-import ar.com.gififyapp.repository.GififyRepositoryImpl
-import ar.com.gififyapp.repository.RetrofitClient
 import ar.com.gififyapp.ui.gififyfavorite.adapter.GififyFavoriteAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GififyFavoriteFragment : Fragment(R.layout.fragment_gifify_favorite), GififyFavoriteAdapter.OnGififyFavoriteClickListener {
 
     private lateinit var binding: FragmentGififyFavoriteBinding
 
-    private val viewModel by viewModels<GififyViewModel> {
-        GififyViewModelFactory(
-            GififyRepositoryImpl(
-                RemoteGififyDataSource(RetrofitClient.webservice),
-                LocalGififyDataSource(LocalDatabase.getDatabase(requireContext()).gififyDao())
-            )
-        )
-    }
+    private val viewModel by viewModels<GififyViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

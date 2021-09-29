@@ -15,20 +15,5 @@ abstract class LocalDatabase: RoomDatabase() {
 
     abstract fun gififyDao(): GififyDao
 
-    companion object {
-        private var INSTANCE: LocalDatabase? = null
 
-        fun getDatabase(context: Context): LocalDatabase{
-            INSTANCE = INSTANCE ?: Room.databaseBuilder(
-                context.applicationContext,
-                LocalDatabase::class.java,
-                Constants.TABLE
-            ).build()
-            return INSTANCE!!
-        }
-
-        fun destroyInstance(){
-            INSTANCE = null
-        }
-    }
 }

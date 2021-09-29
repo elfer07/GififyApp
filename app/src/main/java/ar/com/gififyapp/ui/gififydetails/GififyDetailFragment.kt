@@ -10,33 +10,22 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
 import ar.com.gififyapp.R
-import ar.com.gififyapp.data.local.LocalDatabase
-import ar.com.gififyapp.data.local.LocalGififyDataSource
 import ar.com.gififyapp.data.model.GififyFavorite
-import ar.com.gififyapp.data.remote.RemoteGififyDataSource
 import ar.com.gififyapp.databinding.FragmentGififyDetailBinding
 import ar.com.gififyapp.presentation.GififyViewModel
-import ar.com.gififyapp.presentation.GififyViewModelFactory
-import ar.com.gififyapp.repository.GififyRepositoryImpl
-import ar.com.gififyapp.repository.RetrofitClient
 import com.bumptech.glide.Glide
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.util.*
 
+@AndroidEntryPoint
 class GififyDetailFragment : Fragment(R.layout.fragment_gifify_detail) {
 
     private lateinit var binding: FragmentGififyDetailBinding
 
     private var isGififyFavorite: Boolean? = null
 
-    private val viewModel by viewModels<GififyViewModel> {
-        GififyViewModelFactory(
-            GififyRepositoryImpl(
-                RemoteGififyDataSource(RetrofitClient.webservice),
-            LocalGififyDataSource(LocalDatabase.getDatabase(requireContext()).gififyDao())
-        )
-        )
-    }
+    private val viewModel by viewModels<GififyViewModel>()
 
     private val args: GififyDetailFragmentArgs by navArgs()
 
