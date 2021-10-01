@@ -12,7 +12,7 @@
 
         <ImageView
             android:id="@+id/iv_logo"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:gravity="center"
@@ -103,34 +103,6 @@
             android:layout_margin="8dp"/>
 
         <LinearLayout
-            android:id="@+id/btn_buy_me_a_coffee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_title_buy_me_a_coffee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                tools:text="Buy me a Coffee!"/>
-
-            <ImageView
-                android:id="@+id/iv_buy_coffee"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_bmc_button"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/line" />
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -140,7 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Iconos proporcionados por: "/>
+                android:text="@string/iconos_proporcionados_por"/>
 
             <ImageView
                 android:id="@+id/btn_flaticon"
@@ -170,7 +142,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="¡Comparte esta App!"/>
+                android:text="@string/comparte_esta_app"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -197,13 +169,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="API" />
+                android:text="@string/api" />
 
             <ImageView
                 android:id="@+id/iv_api_logo"
                 android:layout_width="wrap_content"
-                android:layout_height="250dp"
-                android:src="@drawable/ic_launcher_background" />
+                android:layout_height="wrap_content"
+                android:src="@drawable/api" />
 
         </LinearLayout>
 
@@ -223,7 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
-                tools:text="Calificar la App?"/>
+                android:text="@string/calificar_la_app"/>
 
             <ImageView
                 android:id="@+id/btn_qualify"

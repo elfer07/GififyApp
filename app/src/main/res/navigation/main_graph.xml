@@ -110,6 +110,6 @@
     <fragment
         android:id="@+id/aboutAppFragment"
         android:name="ar.com.gififyapp.ui.about.AboutAppFragment"
-        android:label="fragment_about_app"
+        android:label="Acerca de Gifify App"
         tools:layout="@layout/fragment_about_app" />
 </navigation>

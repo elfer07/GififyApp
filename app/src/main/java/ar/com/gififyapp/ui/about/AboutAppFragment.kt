@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import ar.com.gififyapp.R
+import ar.com.gififyapp.application.Constants.IMAGE_TOOLBAR
+import ar.com.gififyapp.application.Constants.VERSION
 import ar.com.gififyapp.databinding.FragmentAboutAppBinding
 import ar.com.gififyapp.presentation.GififyViewModel
 import com.bumptech.glide.Glide
@@ -29,10 +31,11 @@ class AboutAppFragment : Fragment(R.layout.fragment_about_app) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.tvAcerca.text = "Gifify App Ver. $VERSION"
         Glide
             .with(requireContext())
-            .load("https://media0.giphy.com/media/3o6gbbuLW76jkt8vIc/giphy.gif?cid=ecf05e475sxgc298ufim2cwxivn9ziihxd0wx1kdsucv0phg&rid=giphy.gif&ct=g")
+            .load(IMAGE_TOOLBAR)
             .centerCrop()
-            .into(binding.ivApiLogo)
+            .into(binding.ivLogo)
     }
 }

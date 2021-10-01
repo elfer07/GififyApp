@@ -13,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
 import ar.com.gififyapp.R
+import ar.com.gififyapp.application.Constants.IMAGE_TOOLBAR
 import ar.com.gififyapp.data.model.GififyFavorite
 import ar.com.gififyapp.databinding.FragmentGififyDetailBinding
 import ar.com.gififyapp.presentation.GififyViewModel

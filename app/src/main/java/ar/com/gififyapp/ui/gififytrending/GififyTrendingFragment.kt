@@ -16,6 +16,7 @@ import ar.com.gififyapp.data.model.Gifify
 import ar.com.gififyapp.databinding.FragmentGififyTrendingBinding
 import ar.com.gififyapp.presentation.GififyViewModel
 import ar.com.gififyapp.ui.gififytrending.adapter.GififyTrendingAdapter
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -9,11 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import ar.com.gififyapp.R
+import ar.com.gififyapp.application.Constants
 import ar.com.gififyapp.core.Result
 import ar.com.gififyapp.data.model.GififyFavorite
 import ar.com.gififyapp.databinding.FragmentGififyFavoriteBinding
 import ar.com.gififyapp.presentation.GififyViewModel
 import ar.com.gififyapp.ui.gififyfavorite.adapter.GififyFavoriteAdapter
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

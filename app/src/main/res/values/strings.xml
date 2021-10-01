@@ -7,4 +7,8 @@
     <string name="favoritos">favorites</string>
     <string name="search">Search</string>
     <string name="about_app">About App</string>
+    <string name="calificar_la_app">Calificar la App</string>
+    <string name="api">API</string>
+    <string name="comparte_esta_app">¡Comparte esta App!</string>
+    <string name="iconos_proporcionados_por">Iconos proporcionados por:</string>
 </resources>

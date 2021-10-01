@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.gififydetails.GififyDetailFragment">
 
+
     <TextView
         android:id="@+id/tv_title_gifify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        tools:text="title"
         android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="title" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/data_profile"

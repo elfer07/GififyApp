@@ -6,10 +6,12 @@ import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import ar.com.gififyapp.application.Constants.IMAGE_TOOLBAR
 import ar.com.gififyapp.application.ToastHelper
 import ar.com.gififyapp.application.showToast
 import ar.com.gififyapp.core.observe
 import ar.com.gififyapp.databinding.ActivityMainBinding
+import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
