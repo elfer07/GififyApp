@@ -1,6 +1,7 @@
 # GififyApp
 Application with a clean architecture this built with
  - MVVM
+ - Dagger - Hilt
  - Extension Functions
  - Retrofit
  - Navigation Components
