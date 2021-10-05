@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/iv_logo"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:gravity="center"
             tools:src="@mipmap/ic_launcher" />
@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                tools:text="morenofernando@gmail.com"
+                android:text="morenofernando@gmail.com"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                tools:text="https://github.com/elfer07"
+                android:text="https://github.com/elfer07"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -157,7 +157,7 @@
             android:layout_margin="8dp"/>
 
         <LinearLayout
-            android:id="@+id/button_api"
+            android:id="@+id/btn_api"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"

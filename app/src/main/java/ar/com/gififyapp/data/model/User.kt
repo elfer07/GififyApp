@@ -15,5 +15,6 @@ data class User(
     val display_name: String,
     val description: String,
     val instagram_url: String,
+    val website_url: String,
     val is_verified: Boolean
 ) : Parcelable
